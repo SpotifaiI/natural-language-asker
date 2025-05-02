@@ -45,41 +45,11 @@
                             Verificando emoção...
                         </div>
                     </div>
-
-                    <div class="message right">
-                        <div class="info">
-                            <span>Você</span>
-                            <span>01/05/2025 17:31:02</span>
-                        </div>
-                        <div class="content">
-                            Mensagem aleatória com conteúdo talvez suspenso mas nem tão extenso
-                        </div>
-                    </div>
-
-                    <div class="message right">
-                        <div class="info">
-                            <span>Você</span>
-                            <span>01/05/2025 17:31:02</span>
-                        </div>
-                        <div class="content">
-                            Mensagem aleatória com conteúdo talvez suspenso mas nem tão extenso
-                        </div>
-                    </div>
-
-                    <div class="message right">
-                        <div class="info">
-                            <span>Você</span>
-                            <span>01/05/2025 17:31:02</span>
-                        </div>
-                        <div class="content">
-                            Mensagem aleatória com conteúdo talvez suspenso mas nem tão extenso
-                        </div>
-                    </div>
                 </section>
                 <footer class="question">
                     <label>
-                        <input type="text" placeholder="O que você achou do vídeo?" />
-                        <button type="button">Enviar</button>
+                        <input type="text" placeholder="O que você achou do vídeo?" onkeyup="Chat.sendWithEnter(event)" />
+                        <button type="button" onclick="Chat.submit()">Enviar</button>
                     </label>
                 </footer>
             </article>
@@ -91,9 +61,13 @@
                 </header>
 
                 <div>
-                    <a href="javascript:void(0)" onclick="alert('show')">
+                    <a href="javascript:void(0)" onclick="Chat.getReport()">
                         <span class="material-symbols-outlined">smart_toy</span>
                         Análise dos dados
+                    </a>
+                    <a href="javascript:void(0)" onclick="Chat.getReportAll()">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                        Análise íntegra dos dados
                     </a>
                     <a href="https://github.com/SpotifaiI/natural-language-emotioner" target="_blank" rel="nofollow noopener noreferrer external">
                         <span class="material-symbols-outlined">public</span>
@@ -107,5 +81,7 @@
             </div>
         </footer>
     </div>
+
+    <script src="scripts/chat.js"></script>
 </body>
 </html>
